@@ -1,9 +1,10 @@
 import { Component, Input, Output, input, EventEmitter } from '@angular/core';
+import { CommentsComponent } from '../comments/comments.component';
 
 @Component({
   selector: 'app-games',
   standalone: true,
-  imports: [GamesComponent],
+  imports: [GamesComponent , CommentsComponent],
   templateUrl: './games.component.html',
   styleUrl: './games.component.css'
 })
