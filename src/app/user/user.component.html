@@ -1,10 +1,11 @@
 <section>
   @if(isLogin){
   <p>Bienvenido , {{userName}} </p>
+  <img (click)="greet()" src="https://avatars.githubusercontent.com/u/105887697?v=4" alt="">
+  <app-games />
 
   }@else{
   <p>!Inicia sesion </p>
-
+  <button (click)="isLogin = true ">Inica sesion</button>
   }
-  <app-games />
 </section>

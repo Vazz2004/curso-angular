@@ -10,5 +10,9 @@ import { GamesComponent } from '../games/games.component';
 })
 export class UserComponent {
   userName = 'samuel';
-  isLogin = true
+  isLogin = false
+
+  greet() {
+    alert('fotooo')
+  }
 }
