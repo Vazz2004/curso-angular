@@ -11,6 +11,11 @@ import { GamesComponent } from '../games/games.component';
 export class UserComponent {
   userName = 'samuel';
   isLogin = false
+  favGame = ''
+
+  getFavorito(gameName: string) {
+    this.favGame = gameName
+  }
 
   greet() {
     alert('fotooo')

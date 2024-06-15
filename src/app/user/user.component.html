@@ -2,7 +2,11 @@
   @if(isLogin){
   <p>Bienvenido , {{userName}} </p>
   <img (click)="greet()" src="https://avatars.githubusercontent.com/u/105887697?v=4" alt="">
-  <app-games />
+  <app-games (addFovoriteEvent)="getFavorito($event)" username={{userName}} />
+
+  @if(favGame !== ''){
+  <p>Tu juego favorito es {{favGame}} </p>
+  }
 
   }@else{
   <p>!Inicia sesion </p>
