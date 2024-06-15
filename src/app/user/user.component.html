@@ -1,12 +1,17 @@
 <section>
   @if(isLogin){
   <p>Bienvenido , {{userName}} </p>
-  <img (click)="greet()" src="https://avatars.githubusercontent.com/u/105887697?v=4" alt="">
-  <app-games (addFovoriteEvent)="getFavorito($event)" username={{userName}} />
 
   @if(favGame !== ''){
-  <p>Tu juego favorito es {{favGame}} </p>
+  @if(close === false){
+  <div class="notification">
+    <button (click)="close = true"> x</button>
+    <p>Tu juego favorito es {{favGame}} </p>
+  </div>
   }
+  }
+  <img (click)="greet()" src="https://avatars.githubusercontent.com/u/105887697?v=4" alt="">
+  <app-games (addFovoriteEvent)="getFavorito($event)" username={{userName}} />
 
   }@else{
   <p>!Inicia sesion </p>

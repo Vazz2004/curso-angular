@@ -1,4 +1,12 @@
-<h1>Estos son los juegos favoritos de {{username}} </h1>
+<h1>Estos son los juegos disponibles para {{username}} </h1>
 @for(game of games; track game.id){
-<li (click)="fav(game.name)"> {{game.name}} </li>
+<div class="game-list">
+  <div class="game-card" >
+    <img src={{game.urlImg}} alt="">
+    <h1> {{game.name}} </h1>
+    <p> {{game.precio}} </p>
+    <button (click)="fav(game.name)">Agregar a favorito</button>
+
+  </div>
+</div>
 }

@@ -1,5 +1,5 @@
 section {
-  max-width: 500px;
+  max-width: 900px;
   margin: 0 auto;
   padding-top: 32px;
   font-size: 24px;
@@ -10,4 +10,28 @@ img {
   width: 64px;
   height: 64px;
   border-radius: 50%;
+}
+
+.notification {
+  background-color: #28a745;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+  position: fixed;
+  margin-left: 320px;
+}
+
+@keyframes favGame {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
